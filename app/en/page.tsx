@@ -1,5 +1,5 @@
 import ProfileSelect from "@/src/screens/ProfileSelect";
 
 export default function Home() {
-  return <ProfileSelect />;
+  return <ProfileSelect locale="en" />;
 }
