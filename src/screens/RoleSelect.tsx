@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { MOCK_ROLE_LIST } from "../data/Role/mocks";
 
-interface ProfileSelectProps {
+interface RoleSelectProps {
   locale: "pt" | "en"
 }
 
-export default function ProfileSelect({ locale }: ProfileSelectProps) {
+export default function RoleSelect({ locale }: RoleSelectProps) {
   return (
     <>
       <h1>Pedro Costa</h1>

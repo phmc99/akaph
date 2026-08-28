@@ -1,4 +1,4 @@
-import ProfileSelect from "@/src/screens/ProfileSelect";
+import RoleSelect from "@/src/screens/RoleSelect";
 
 interface HomeProps {
   params: Promise<{ locale: "pt" | "en" }>;
@@ -7,5 +7,5 @@ interface HomeProps {
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
 
-  return <ProfileSelect locale={locale} />;
+  return <RoleSelect locale={locale} />;
 }
