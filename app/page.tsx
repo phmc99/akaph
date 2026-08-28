@@ -1,5 +1,5 @@
-import ProfileSelect from "@/src/screens/ProfileSelect";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return <ProfileSelect />;
+export default function Page() {
+  redirect("/pt");
 }
