@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Martel_Sans } from "next/font/google"
+
 import "../globals.css";
-import { notFound, redirect } from "next/navigation";
+
+const martel = Martel_Sans({
+  weight: "400",
+  subsets: ["latin"]
+})
 
 const metadataByLocale = {
   pt: {
@@ -36,7 +43,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
   const { locale } = await params;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={martel.className}>
       <body>{children}</body>
     </html>
   );

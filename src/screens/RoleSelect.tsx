@@ -7,22 +7,25 @@ interface RoleSelectProps {
 
 export default function RoleSelect({ locale }: RoleSelectProps) {
   return (
-    <>
-      <h1>Pedro Costa</h1>
-      <Link href={locale === "pt" ? "/en" : "/pt"}>
-        {locale === "pt" ? "English" : "Português"}
-      </Link>
-      <div className="flex flex-col gap-2 items-center">
+    <main className="h-screen flex flex-col items-center justify-center">
+      <h1 className="text-4xl mb-2 text-mauve-100">Pedro Costa</h1>
+      <h2 className="text-lg mb-8 text-mauve-400">{locale === "pt" ? "Seja bem-vindo(a)!" : "Welcome!"}</h2>
+
+      <div className="flex flex-col gap-2 items-center mb-8">
         {MOCK_ROLE_LIST.map((role) => (
           <Link
             key={role.id}
             aria-label={role.description[locale]}
             href={`${locale}/${role.pathname}`}
-            className="bg-zinc-700 w-sm cursor-pointer">
+            className="bg-mauve-700 text-mauve-300 w-xs cursor-pointer text-center py-4 rounded-xl">
             {role.name[locale]}
           </Link>
         ))}
       </div>
-    </>
+
+      <Link href={locale === "pt" ? "/en" : "/pt"} className="text-zinc-700 underline">
+        {locale === "pt" ? "English 🇺🇸" : "Português 🇧🇷"}
+      </Link>
+    </main>
   );
 }
