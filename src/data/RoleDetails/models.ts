@@ -14,5 +14,14 @@ export interface RoleDetailsSection {
 	id: number;
 	roleDetailsId: number;
 	name: langStringObject;
-	htmlDescription: langStringObject;
+	htmlDescription: langStringObject | string;
+}
+
+export interface company {
+    id: `${string}-${string}-${string}-${string}-${string}`;
+    name: string;
+		role: langStringObject;
+    startDate: Date;
+    endDate: Date;
+    description: langStringObject;
 }

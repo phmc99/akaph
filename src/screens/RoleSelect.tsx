@@ -16,8 +16,13 @@ export default function RoleSelect({ locale }: RoleSelectProps) {
           <Link
             key={role.id}
             aria-label={role.description[locale]}
-            href={`${locale}/${role.pathname}`}
-            className="bg-mauve-700 text-mauve-300 w-xs cursor-pointer text-center py-4 rounded-xl">
+            href={role.disabled ? "#" : `${locale}/${role.pathname}`}
+            className={
+              `bg-mauve-700 text-mauve-300 w-xs text-center py-4 rounded-xl 
+              ${role.disabled ? "pointer-events-none opacity-30" : "cursor-pointer"}
+              `
+            }
+          >
             {role.name[locale]}
           </Link>
         ))}

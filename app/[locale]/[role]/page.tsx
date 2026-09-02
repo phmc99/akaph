@@ -8,8 +8,8 @@ interface RoleProps {
   params: Promise<{ role: string, locale: "pt" | "en" }>
 }
 
-async function getRoleDetails(role: string): Promise<RoleDetails> {
-  const roleDetails = await getRole(role);
+async function getRoleDetails(role: string, locale: "pt" | "en"): Promise<RoleDetails> {
+  const roleDetails = await getRole(role, locale);
 
   if (!roleDetails) {
     return notFound();
@@ -21,7 +21,7 @@ async function getRoleDetails(role: string): Promise<RoleDetails> {
 export async function generateMetadata({ params }: RoleProps): Promise<Metadata> {
   const { locale, role } = await params;
 
-  const roleDetails = await getRoleDetails(role);
+  const roleDetails = await getRoleDetails(role, locale);
 
   return {
     title: roleDetails.name[locale],
@@ -33,7 +33,7 @@ export default async function Role({ params }: RoleProps) {
   const { role, locale } = await params;
   const cleanPathname = role.replace("/", "");
 
-  const roleDetails = await getRoleDetails(role);
+  const roleDetails = await getRoleDetails(role, locale);
 
   return <RoleDetailsScreen role={cleanPathname} locale={locale} details={roleDetails} />
 }

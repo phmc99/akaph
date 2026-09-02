@@ -5,6 +5,7 @@ export interface Role {
 	name: langStringObject;
 	description: langStringObject;
 	pathname: string;
+	disabled?: boolean
 };
 
 export type Roles = Role[];

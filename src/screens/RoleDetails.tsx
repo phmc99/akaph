@@ -22,8 +22,8 @@ export default async function RoleDetailsScreen({ locale, role, details }: RoleD
       <ul className="mt-8 w-2/3 h-3/4 margin-auto p-2 space-y-4 overflow-y-scroll">
         {details.sections.map((section) => (
           <li key={`${role}-section-${section.id}`} className="bg-zinc-900 p-4 rounded-lg shadow shadow-mauve-900">
-            <h2>{section.name[locale]}</h2>
-            <div dangerouslySetInnerHTML={{ __html: section.htmlDescription[locale] }} />
+            <h2 className="mb-2 text-xl font-semibold">{section.name[locale]}</h2>
+            <div dangerouslySetInnerHTML={{ __html: typeof section.htmlDescription === "string" ? section.htmlDescription : section.htmlDescription[locale] }} />
           </li>
         ))}
       </ul>
