@@ -1,34 +1,41 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Martel_Sans } from "next/font/google"
-
+import { Geist } from "next/font/google";
+import AppShell from "@/src/components/AppShell";
 import "../globals.css";
 
-const martel = Martel_Sans({
-  weight: "400",
-  subsets: ["latin"]
-})
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
 
 const metadataByLocale = {
   pt: {
-    title: "a.k.a. ph",
-    description: "Em eterna construção",
+    title: "Pedro Costa • Inicio",
+    description: "Desenvolvedor Fullstack & Professor de Jiu-Jitsu",
   },
   en: {
-    title: "a.k.a. ph",
-    description: "Always under construction",
+    title: "Pedro Costa • Home",
+    description: "Software Engineer & BJJ Coach",
   },
 };
 
 type ValidLocale = keyof typeof metadataByLocale;
 
+interface LayoutParams {
+  params: Promise<{ locale: string }>;
+  children: React.ReactNode;
+}
+
 export async function generateMetadata({
   params,
-}: LayoutProps<"/[locale]">): Promise<Metadata> {
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
 
   if (!(locale in metadataByLocale)) {
-    return notFound()
+    return notFound();
   }
 
   const metadata = metadataByLocale[locale as ValidLocale];
@@ -39,12 +46,18 @@ export async function generateMetadata({
   };
 }
 
-export default async function RootLayout({ children, params }: LayoutProps<"/[locale]">) {
+export default async function RootLayout({ children, params }: LayoutParams) {
   const { locale } = await params;
 
+  if (!(locale in metadataByLocale)) {
+    return notFound();
+  }
+
   return (
-    <html lang={locale} className={martel.className}>
-      <body>{children}</body>
+    <html lang={locale} className={geist.variable}>
+      <body>
+        <AppShell locale={locale as "pt" | "en"}>{children}</AppShell>
+      </body>
     </html>
   );
 }
