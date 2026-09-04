@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdPerson } from "react-icons/md";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 
@@ -43,9 +44,7 @@ export default function Header({ locale }: HeaderProps) {
           <ThemeToggle variant="icon" locale={locale} />
           <div className="flex items-center pl-0.5">
             <div className="w-8 h-8 rounded-full bg-surface-container-high ring-2 ring-primary/20 overflow-hidden flex items-center justify-center text-xs font-bold text-primary">
-              <span className="material-symbols-outlined text-[20px] text-primary">
-                person
-              </span>
+              <MdPerson className="text-[20px] text-primary" />
             </div>
           </div>
         </div>

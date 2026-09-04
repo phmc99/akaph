@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MaisData } from "@/src/data/Mais/models";
 import { getLangText } from "@/src/data/utils";
+import AppIcon from "@/src/components/AppIcon";
 
 interface MaisScreenProps {
   data: MaisData;
@@ -45,7 +46,7 @@ export default function MaisScreen({ data, locale }: MaisScreenProps) {
                     feat.iconBgClass || "bg-surface-container text-primary"
                   }`}
                 >
-                  <span className="material-symbols-outlined text-[22px]">{feat.icon}</span>
+                  <AppIcon name={feat.icon} className="text-[22px]" />
                 </div>
                 <div className="flex flex-col">
                   <h2 className="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">

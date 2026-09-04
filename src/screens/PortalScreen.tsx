@@ -4,6 +4,7 @@ import { PortalData } from "@/src/data/Portal/models";
 import { getLangText } from "@/src/data/utils";
 import CopyEmailButton from "@/src/components/CopyEmailButton";
 import ThemeToggle from "@/src/components/ThemeToggle";
+import AppIcon from "@/src/components/AppIcon";
 
 interface PortalScreenProps {
   data: PortalData;
@@ -57,7 +58,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors"
             >
-              <span className="material-symbols-outlined text-[16px]">{s.icon}</span>
+              <AppIcon name={s.icon} className="text-[16px]" />
               <span>{s.label}</span>
             </a>
           ))}
@@ -75,7 +76,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
               {getLangText(pathSelection.subtitle, locale)}
             </p>
           </div>
-          <span className="material-symbols-outlined text-primary text-[24px]">alt_route</span>
+          <AppIcon name="alt_route" className="text-primary text-[24px]" />
         </div>
 
         {/* Grid Cards */}
@@ -85,7 +86,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
             <div className="flex items-start justify-between gap-3 mb-3">
               <div className="flex items-center gap-2.5">
                 <div className="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm">
-                  <span className="material-symbols-outlined text-[20px]">terminal</span>
+                  <AppIcon name="terminal" className="text-[20px]" />
                 </div>
                 <div>
                   {/* <span className="inline-block px-2 py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider bg-secondary-fixed text-on-secondary-fixed mb-0.5 font-medium">
@@ -96,9 +97,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
                   </h3>
                 </div>
               </div>
-              {/* <span className="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all text-[22px]">
-                arrow_forward
-              </span> */}
+              {/* <AppIcon name="arrow_forward" className="text-outline group-hover:text-primary group-hover:translate-x-1 transition-all text-[22px]" /> */}
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
               {getLangText(pathSelection.devCard.description, locale)}
@@ -122,7 +121,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
                 className="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:underline"
               >
                 <span>{getLangText(pathSelection.devCard.linkText, locale)}</span>
-                <span className="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                <AppIcon name="arrow_right_alt" className="text-[16px]" />
               </Link>
             </div>
           </article>
@@ -132,7 +131,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
             <div className="flex items-start justify-between gap-3 mb-3">
               <div className="flex items-center gap-2.5">
                 <div className="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-sm">
-                  <span className="material-symbols-outlined text-[20px]">sports_martial_arts</span>
+                  <AppIcon name="sports_martial_arts" className="text-[20px]" />
                 </div>
                 <div>
                   {/* <span className="inline-block px-2 py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider bg-tertiary-fixed-dim text-on-tertiary-fixed-variant mb-0.5 font-medium">
@@ -143,9 +142,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
                   </h3>
                 </div>
               </div>
-              {/* <span className="material-symbols-outlined text-outline group-hover:text-tertiary group-hover:translate-x-1 transition-all text-[22px]">
-                arrow_forward
-              </span> */}
+              {/* <AppIcon name="arrow_forward" className="text-outline group-hover:text-tertiary group-hover:translate-x-1 transition-all text-[22px]" /> */}
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
               {getLangText(pathSelection.bjjCard.description, locale)}
@@ -169,7 +166,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
                 className="inline-flex items-center gap-1 font-label-md text-label-md text-tertiary font-semibold hover:underline"
               >
                 <span>{getLangText(pathSelection.bjjCard.linkText, locale)}</span>
-                <span className="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                <AppIcon name="arrow_right_alt" className="text-[16px]" />
               </Link>
             </div>
           </article>
@@ -265,7 +262,7 @@ export default function PortalScreen({ data, locale }: PortalScreenProps) {
             className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all whitespace-nowrap w-full sm:w-auto"
           >
             <span>{getLangText(editorialSummary.buttonText, locale)}</span>
-            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+            <AppIcon name="arrow_forward" className="text-[16px]" />
           </Link>
         </div>
       </section> */}

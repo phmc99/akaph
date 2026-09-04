@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import { MdWbSunny, MdDarkMode } from "react-icons/md";
+
 interface ThemeToggleProps {
   variant?: "icon" | "pill";
   locale?: "pt" | "en";
@@ -59,12 +61,7 @@ export default function ThemeToggle({ variant = "icon", locale = "pt" }: ThemeTo
               : "text-on-surface-variant hover:text-on-surface"
           }`}
         >
-          <span
-            className="material-symbols-outlined text-[15px]"
-            style={{ fontVariationSettings: theme === "light" ? "'FILL' 1" : "'FILL' 0" }}
-          >
-            light_mode
-          </span>
+          <MdWbSunny className="text-[15px]" />
           <span>{locale === "pt" ? "Claro" : "Light"}</span>
         </button>
 
@@ -77,12 +74,7 @@ export default function ThemeToggle({ variant = "icon", locale = "pt" }: ThemeTo
               : "text-on-surface-variant hover:text-on-surface"
           }`}
         >
-          <span
-            className="material-symbols-outlined text-[15px]"
-            style={{ fontVariationSettings: theme === "dark" ? "'FILL' 1" : "'FILL' 0" }}
-          >
-            dark_mode
-          </span>
+          <MdDarkMode className="text-[15px]" />
           <span>{locale === "pt" ? "Escuro" : "Dark"}</span>
         </button>
       </div>
@@ -96,9 +88,11 @@ export default function ThemeToggle({ variant = "icon", locale = "pt" }: ThemeTo
       onClick={() => toggleTheme(theme === "light" ? "dark" : "light")}
       className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"
     >
-      <span className="material-symbols-outlined text-[18px]">
-        {theme === "light" ? "light_mode" : "dark_mode"}
-      </span>
+      {theme === "light" ? (
+        <MdWbSunny className="text-[18px]" />
+      ) : (
+        <MdDarkMode className="text-[18px]" />
+      )}
     </button>
   );
 }

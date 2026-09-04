@@ -4,6 +4,7 @@ import { getLangText } from "@/src/data/utils";
 import CopyEmailButton from "@/src/components/CopyEmailButton";
 import ThemeToggle from "@/src/components/ThemeToggle";
 import LanguageToggle from "@/src/components/LanguageToggle";
+import AppIcon from "@/src/components/AppIcon";
 
 interface LinksScreenProps {
   data: LinksData;
@@ -42,9 +43,7 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
             className="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full p-1 flex items-center justify-center shadow-sm"
             title={getLangText(hero.verifiedText, locale)}
           >
-            <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-              verified
-            </span>
+            <AppIcon name="verified" className="text-[15px]" />
           </div>
         </div>
 
@@ -69,7 +68,7 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-surface-container-lowest shadow-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors"
               >
-                <span className="material-symbols-outlined text-[18px]">{social.icon}</span>
+                <AppIcon name={social.icon} className="text-[18px]" />
               </a>
             ))}
           </div>
@@ -106,7 +105,7 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
                           : "bg-surface-container-low text-primary group-hover:bg-primary-fixed"
                       }`}
                     >
-                      <span className="material-symbols-outlined text-[20px]">{link.icon}</span>
+                      <AppIcon name={link.icon} className="text-[20px]" />
                     </div>
                     <div className="flex flex-col min-w-0">
                       <div className="flex items-center gap-2">
@@ -119,13 +118,12 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
                       </span>
                     </div>
                   </div>
-                  <span
-                    className={`material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-all flex-shrink-0 ${
+                  <AppIcon
+                    name={link.isExternal ? "open_in_new" : "arrow_forward"}
+                    className={`text-[18px] group-hover:translate-x-0.5 transition-all flex-shrink-0 ${
                       link.isHighlighted ? "text-primary" : "text-outline group-hover:text-primary"
                     }`}
-                  >
-                    {link.isExternal ? "open_in_new" : "arrow_forward"}
-                  </span>
+                  />
                 </>
               );
 
@@ -167,9 +165,7 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container active:scale-95 transition-all"
             >
-              <span className={`material-symbols-outlined text-[20px] ${opt.colorClass || ""}`}>
-                {opt.icon}
-              </span>
+              <AppIcon name={opt.icon} className={`text-[20px] ${opt.colorClass || ""}`} />
               <span className="font-label-md text-label-md font-medium">{opt.label}</span>
             </a>
           ))}

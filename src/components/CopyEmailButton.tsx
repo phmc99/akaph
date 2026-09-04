@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MdMail, MdContentCopy, MdCheck } from "react-icons/md";
 
 interface CopyEmailButtonProps {
   email?: string;
@@ -36,7 +37,7 @@ export default function CopyEmailButton({
     return (
       <div className="flex items-center justify-between p-2.5 pl-3.5 rounded-xl bg-surface-container-low shadow-sm w-full">
         <div className="flex items-center gap-2 min-w-0 mr-2">
-          <span className="material-symbols-outlined text-[18px] text-outline">mail</span>
+          <MdMail className="text-[18px] text-outline" />
           <span className="font-body-sm text-body-sm text-on-surface truncate select-all">
             {email}
           </span>
@@ -47,7 +48,7 @@ export default function CopyEmailButton({
           onClick={handleCopy}
           className="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container active:scale-95 flex items-center gap-1 transition-all flex-shrink-0"
         >
-          <span className="material-symbols-outlined text-[15px] text-primary">content_copy</span>
+          <MdContentCopy className="text-[15px] text-primary" />
           <span className="font-label-sm text-label-sm font-semibold">
             {copied ? (locale === "pt" ? "Copiado!" : "Copied!") : (locale === "pt" ? "Copiar" : "Copy")}
           </span>
@@ -63,7 +64,7 @@ export default function CopyEmailButton({
         onClick={handleCopy}
         className="flex-1 min-w-[130px] h-9 px-3 rounded-full bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container flex items-center justify-center gap-1.5 active:scale-95 transition-all"
       >
-        <span className="material-symbols-outlined text-[16px] text-primary">content_copy</span>
+        <MdContentCopy className="text-[16px] text-primary" />
         <span className="font-label-md text-label-md font-medium">
           {copied ? copiedText : defaultText}
         </span>
@@ -78,9 +79,7 @@ export default function CopyEmailButton({
         onClick={handleCopy}
         className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container active:scale-95 transition-all"
       >
-        <span className="material-symbols-outlined text-[18px]">
-          {copied ? "check" : "mail"}
-        </span>
+        {copied ? <MdCheck className="text-[18px]" /> : <MdMail className="text-[18px]" />}
         <span>{copied ? copiedText : defaultText}</span>
       </button>
     );
@@ -92,9 +91,7 @@ export default function CopyEmailButton({
       onClick={handleCopy}
       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95 shadow-sm"
     >
-      <span className="material-symbols-outlined text-[16px]">
-        {copied ? "check" : "content_copy"}
-      </span>
+      {copied ? <MdCheck className="text-[16px]" /> : <MdContentCopy className="text-[16px]" />}
       <span>{copied ? copiedText : defaultText}</span>
     </button>
   );

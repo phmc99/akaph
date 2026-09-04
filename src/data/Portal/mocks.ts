@@ -15,8 +15,8 @@ export const portalMockData: PortalData = {
       en: "Hello, I'm Pedro.",
     },
     description: {
-      pt: "Engenheiro de software construindo produtos digitais resilientes & Professor de Jiu-Jitsu ensinando a arte suave da tomada de decisão sob pressão extrema.",
-      en: "Software engineer building resilient digital products & Brazilian Jiu-Jitsu coach teaching the gentle art of high-pressure decision making.",
+      pt: "Desenvolvedor Fullstack & Professor de Jiu-Jitsu",
+      en: "Fullstack Software Engineer & Jiu-Jitsu Coach",
     },
     email: "contact.devph@gmail.com",
     socialLinks: [
@@ -38,8 +38,8 @@ export const portalMockData: PortalData = {
       en: "Choose a path",
     },
     subtitle: {
-      pt: "Dois universos interconectados pela mesma obsessão por precisão e execução.",
-      en: "Two interconnected universes driven by the same obsession with precision and execution.",
+      pt: "Aqui você pode ver um pouco mais sobre duas coisas que eu amo fazer.",
+      en: "Here you can see a little more about two things I love to do.",
     },
     devCard: {
       badge: {
@@ -51,10 +51,10 @@ export const portalMockData: PortalData = {
         en: "Software Engineering",
       },
       description: {
-        pt: "Sistemas distribuídos, interfaces de alta fidelidade e infraestrutura resiliente. Do design de sistemas à implementação rigorosa em produção.",
-        en: "Distributed systems, high-fidelity interfaces, and resilient infrastructure. From system design to rigorous production implementation.",
+        pt: "Experiência com produtos digitais, sistemas de gestão (ERPs) e aplicativos mobile. Já trabalhei com diversos tipos de projetos, sempre buscando entregar o melhor resultado.",
+        en: "Experience with digital products, management systems (ERPs), and mobile applications. I have worked on various types of projects, always aiming to deliver the best results.",
       },
-      tags: ["Fullstack Dev", "Web Dev", "Mobile - Hybrid", "Basic DevOps", "Basic Database", "AI Applications"],
+      tags: ["Fullstack Dev", "Mobile - Hybrid"],
       metaText: {
         pt: "4+ anos de experiência",
         en: "4+ years of experience",
@@ -84,8 +84,8 @@ export const portalMockData: PortalData = {
         en: "15+ years on the mats",
       },
       linkText: {
-        pt: "Explorar Tatame & Aulas",
-        en: "Explore Mats & Classes",
+        pt: "Ver mais",
+        en: "See more",
       },
       href: "/bjj",
     },

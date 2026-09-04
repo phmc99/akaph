@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import AppIcon from "./AppIcon";
+
 interface BottomNavProps {
   locale: "pt" | "en";
 }
@@ -63,12 +65,7 @@ export default function BottomNav({ locale }: BottomNavProps) {
                 : "text-on-surface-variant hover:text-on-surface"
             }`}
           >
-            <span
-              className="material-symbols-outlined text-[22px]"
-              style={{ fontVariationSettings: item.isActive ? "'FILL' 1" : "'FILL' 0" }}
-            >
-              {item.icon}
-            </span>
+            <AppIcon name={item.icon} className="text-[22px]" />
             <span className="font-label-sm text-label-sm tracking-tight mt-0.5">
               {item.label}
             </span>
