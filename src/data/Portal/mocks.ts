@@ -52,7 +52,7 @@ export const portalMockData: PortalData = {
       },
       description: {
         pt: "Experiência com produtos digitais, sistemas de gestão (ERPs) e aplicativos mobile. Já trabalhei com diversos tipos de projetos, sempre buscando entregar o melhor resultado.",
-        en: "Experience with digital products, management systems (ERPs), and mobile applications. I have worked on various types of projects, always aiming to deliver the best results.",
+        en: "Experience with digital products, management systems (ERPs), and mobile applications. I have worked on many types of projects, always looking to deliver the best results.",
       },
       tags: ["Fullstack Dev", "Mobile - Hybrid"],
       metaText: {
@@ -75,8 +75,8 @@ export const portalMockData: PortalData = {
         en: "Jiu-Jitsu",
       },
       description: {
-        pt: "Biomecânica aplicada, alavancas, leitura de padrão sob exaustão extrema e metodologia estruturada de ensino para crianças, amadores e competidores.",
-        en: "Applied biomechanics, leverage, pattern recognition under exhaustion, and structured teaching methodology for all levels.",
+        pt: "Comecei a treinar Judo com 8 anos e Jiu Jitsu aos 19 anos. Dediquei grande parte da minha vida as artes marciais e hoje meu objetivo e compartilhar conhecimento para ajudar pessoas a melhorarem suas vidas.",
+        en: "I started training Judo at age 8 and Brazilian Jiu-Jitsu at 19. I've dedicated a significant part of my life to martial arts, and today my goal is to share knowledge to help others improve their lives.",
       },
       tags: ["Gi & No-Gi", "Judo", " Kids"],
       metaText: {

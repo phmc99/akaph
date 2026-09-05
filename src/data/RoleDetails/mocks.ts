@@ -16,18 +16,18 @@ export const devRoleMock: RoleDetails = {
     en: "Available for Q2/2026 // Advisory & Staff Roles",
   },
   title: {
-    pt: "Hey, I'm Pedro. I design, build & scale distributed software systems.",
-    en: "Hey, I'm Pedro. I design, build & scale distributed software systems.",
+    pt: "Seja bem-vindo(a)! Aqui você pode ver um pouco mais sobre quem eu sou e o que eu faço.",
+    en: "Welcome! Here you can see a bit more about who I am and what I do.",
   },
   bio: {
-    pt: "Focado em arquitetura de microsserviços, resiliência de baixa latência, engenharia de produto e liderança técnica de equipes.",
-    en: "Focused on microservice architecture, low-latency resilience, product engineering, and technical squad leadership.",
+    pt: "Meu foco na área tech foi sempre resolver problemas. Em 5 anos de experiência já trabalhei com start-ups, sistema legado, mobile e EdTech. Meu atual objetivo é resolver problemas maiores e ter mais experiencia com gestão de projetos e times.",
+    en: "My focus in the tech area was always on solving problems. In 5 years of experience I've worked with start-ups, legacy systems, mobile and EdTech. My current goal is to solve bigger problems and gain more experience in project and team management.",
   },
   avatar: {
     name: "Pedro Costa",
     title: {
-      pt: "Staff Software Engineer & Distributed Systems",
-      en: "Staff Software Engineer & Distributed Systems",
+      pt: "Desenvolvedor Fullstack",
+      en: "Fullstack Software Engineer",
     },
     quote: {
       pt: '"Simplicidade radical na arquitetura, limites de domínio desacoplados e tolerância a falhas sob alto tráfego."',
@@ -42,24 +42,24 @@ export const devRoleMock: RoleDetails = {
     },
     {
       label: { pt: "Foco", en: "Focus" },
-      value: { pt: "Distributed Systems, High Throughput p99, Cloud Native", en: "Distributed Systems, High Throughput p99, Cloud Native" },
+      value: { pt: "REST APIs, Web Apps, Mobile Apps, Sites e Landing Pages", en: "REST APIs, Web Apps, Mobile Apps, Sites & Landing Pages" },
     },
     {
       label: { pt: "Experiência", en: "Experience" },
-      value: { pt: "9+ anos projetando sistemas críticos e liderando squads.", en: "9+ years designing critical systems & leading squads." },
+      value: { pt: "4+ anos resolvendo problemas de tecnologia.", en: "4+ years solving tech problems." },
     },
     {
-      label: { pt: "Superpoder", en: "Superpower" },
-      value: { pt: "Depurar gargalos sob extrema pressão com clareza analítica e visão sistêmica.", en: "Debugging bottlenecks under high pressure with analytical clarity and systemic vision." },
+      label: { pt: "Habilidades", en: "Skills" },
+      value: { pt: "Além da parte técnica, gosto de trabalhar de forma organizada, proativa e com clareza na comunicação.", en: "Debugging bottlenecks under high pressure with analytical clarity and systemic vision." },
     },
     {
       label: { pt: "Localização", en: "Location" },
-      value: { pt: "Brasil, Brasil (Remoto Global)", en: "Brasil, Brazil (Global Remote)" },
+      value: { pt: "Brasil (Remoto Global)", en: "Brazil (Global Remote)" },
       icon: "location_on",
     },
     {
       label: { pt: "Status", en: "Status" },
-      value: { pt: "Disponível para Advisory & Consultoria", en: "Available for Advisory & Consulting" },
+      value: { pt: "Disponível para projetos full-time e freelancers", en: "Available for full-time and freelance projects" },
     },
     {
       label: { pt: "Stack Principal", en: "Main Stack" },

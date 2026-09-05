@@ -36,7 +36,7 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
         <div className="relative mb-4">
           <div className="w-24 h-24 rounded-full p-1 bg-surface-container shadow-md">
             <div className="w-full h-full rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-3xl shadow-sm">
-              GD
+              PH
             </div>
           </div>
           <div
@@ -89,21 +89,19 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
               const isInternal = link.href.startsWith("/");
               const linkHref = isInternal ? `/${locale}${link.href}` : link.href;
 
-              const cardClasses = `group relative flex items-center justify-between p-3.5 rounded-xl shadow-sm hover:shadow-md transition-all ${
-                link.isHighlighted
+              const cardClasses = `group relative flex items-center justify-between p-3.5 rounded-xl shadow-sm hover:shadow-md transition-all ${link.isHighlighted
                   ? "bg-secondary-container/60 hover:bg-secondary-container"
                   : "bg-surface-container-lowest hover:bg-surface-container-low"
-              } ${link.isFullWidth ? "sm:col-span-2" : ""}`;
+                } ${link.isFullWidth ? "sm:col-span-2" : ""}`;
 
               const Content = (
                 <>
                   <div className="flex items-center gap-3 min-w-0 pr-2">
                     <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
-                        link.isHighlighted
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${link.isHighlighted
                           ? "bg-primary text-on-primary shadow-sm"
                           : "bg-surface-container-low text-primary group-hover:bg-primary-fixed"
-                      }`}
+                        }`}
                     >
                       <AppIcon name={link.icon} className="text-[20px]" />
                     </div>
@@ -120,9 +118,8 @@ export default function LinksScreen({ data, locale }: LinksScreenProps) {
                   </div>
                   <AppIcon
                     name={link.isExternal ? "open_in_new" : "arrow_forward"}
-                    className={`text-[18px] group-hover:translate-x-0.5 transition-all flex-shrink-0 ${
-                      link.isHighlighted ? "text-primary" : "text-outline group-hover:text-primary"
-                    }`}
+                    className={`text-[18px] group-hover:translate-x-0.5 transition-all flex-shrink-0 ${link.isHighlighted ? "text-primary" : "text-outline group-hover:text-primary"
+                      }`}
                   />
                 </>
               );

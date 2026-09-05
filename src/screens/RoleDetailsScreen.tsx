@@ -161,7 +161,7 @@ export default function RoleDetailsScreen({ details, locale }: RoleDetailsScreen
         <div className="flex flex-col sm:flex-row items-center gap-5">
           <div className="relative flex-shrink-0">
             <div className="w-20 h-20 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-2xl shadow-md">
-              GD
+              PH
             </div>
             <span className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary text-[11px] font-bold shadow">
               <AppIcon name={isDev ? "code" : "bjj"} className="text-[14px]" />
